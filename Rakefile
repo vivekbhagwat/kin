@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "kin"
   gem.homepage = "http://github.com/vivekbhagwat/kin"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "A simple ruby wrapper for the Gilt API"
+  gem.description = "A simple ruby wrapper for the Gilt API, based on the scala wrapper at github.com/mnn2104/Aurum"
   gem.email = "bhagwat.vivek@gmail.com"
   gem.authors = ["Vivek Bhagwat"]
   # dependencies defined in Gemfile
