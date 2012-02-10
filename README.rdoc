@@ -1,6 +1,9 @@
 = kin
 
-Description goes here.
+	Simple demo, etc.
+
+== About
+	In case you're wondering about the name, kin means gold in japanese
 
 == Contributing to kin
  
