@@ -1,5 +1,5 @@
 = kin
-
+kin is a simple ruby client binding for [Gilt's API](http://dev.gilt.com/). It is designed to be simple to use, so that developers don't need to worry about making the correct requests or interpreting the results of those requests, and can instead get right to developing their awesome apps! In case you're wondering about the name, kin means gold in Japanese (which is kind of related to Gilt)
 
 ==Install
   gem install kin
@@ -13,23 +13,23 @@
   sales_array = gilt.active_sales
 	
 ===Get all Active Sales within a Store
-  sales_array = gilt.active_sales('women') #could also be men, kids, or home
+  sales_array = gilt.active_sales('women') #could also be men, kids, or home (will be validated)
 
 ===Get all Upcoming Sales
 	sales_array = gilt.upcoming_sales
 
 ===Get all Upcoming Sales within a Store
-  sales_array = gilt.upcoming_sales('women') #could also be men, kids, or home
+  sales_array = gilt.upcoming_sales('women') #could also be men, kids, or home (will be validated)
 
 ===Get details about a particular Sale
-  sale = gilt.sale_detail('women', store_key) #assuming store_key is already defined and valid
+  sale = gilt.sale_detail('women', sale_key) #assuming sale_key is already defined and valid
 
 ===Get details about a particular Product
 ====Using Product ID
   product = gilt.product_detail(product_id) #assuming product_id is already defined and valid
 
 ====Using a URL given in a Sale Detail
-	product = gilt.product_detail_from_url("https://api.gilt.com/v1/products/1268792864/detail.json") #example URL
+	product = gilt.product_detail_from_url(url) #assuming url is already defined (it will be validated)
 
 ===Extras
 ====Get a list of valid stores
@@ -40,9 +40,6 @@ Create a file in the test/ directory called "secret.rb" with the contents as fol
   module Secret def Secret.password '<API_KEY>' end end #your api key goes there (without angle brackets)
 and run (in the shell):
   $:ruby test_kin.rb
-
-== About
-In case you're wondering about the name, kin means gold in japanese (which is kind of related to Gilt)
 
 == Contributing to kin
  
