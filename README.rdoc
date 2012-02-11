@@ -1,5 +1,5 @@
 = kin
-kin is a simple ruby client binding for [Gilt's API](http://dev.gilt.com/). It is designed to be simple to use, so that developers don't need to worry about making the correct requests or interpreting the results of those requests, and can instead get right to developing their awesome apps! In case you're wondering about the name, kin means gold in Japanese (which is kind of related to Gilt)
+kin is a simple ruby client binding for  {Gilt's API}[http://dev.gilt.com/]. It is designed to be simple to use, so that developers don't need to worry about making the correct requests or interpreting the results of those requests, and can instead get right to developing their awesome apps! In case you're wondering about the name, kin means gold in Japanese (which is kind of related to Gilt)
 
 ==Install
   gem install kin
