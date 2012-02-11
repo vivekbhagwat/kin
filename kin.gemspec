@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "kin.gemspec",
     "lib/image.rb",
     "lib/kin.rb",
     "lib/product.rb",
