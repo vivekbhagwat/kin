@@ -1,6 +1,11 @@
 = kin
 
-	Simple demo, etc.
+
+==Install
+  gem install kin
+
+==Use
+  gilt = Kin::Client.new(Secret.password)
 
 == About
 In case you're wondering about the name, kin means gold in japanese
