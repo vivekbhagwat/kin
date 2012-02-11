@@ -5,10 +5,34 @@
   gem install kin
 
 ==Use
+
+===Create a Client
   gilt = Kin::Client.new(Secret.password)
 
+===Get all Active Sales
+	sales_array = gilt.active_sales
+	
+===Get all Active Sales within a Store
+  sales_array = gilt.active_sales('women') #could also be men, kids, or home
+
+===Get all Upcoming Sales
+	sales_array = gilt.upcoming_sales
+
+===Get all Upcoming Sales within a Store
+  sales_array = gilt.upcoming_sales('women') #could also be men, kids, or home
+
+===Extras
+====Get a list of valid stores
+  Kin.stores
+
+==To Test
+Create a file in the test/ directory called "secret.rb" with the contents as follows:
+  module Secret def Secret.password '<API_KEY>' end end #your api key goes there (without angle brackets)
+and run:
+  ruby test_kin.rb
+
 == About
-In case you're wondering about the name, kin means gold in japanese
+In case you're wondering about the name, kin means gold in japanese (which is kind of related to Gilt)
 
 == Contributing to kin
  
