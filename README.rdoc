@@ -10,7 +10,7 @@
   gilt = Kin::Client.new(Secret.password)
 
 ===Get all Active Sales
-	sales_array = gilt.active_sales
+  sales_array = gilt.active_sales
 	
 ===Get all Active Sales within a Store
   sales_array = gilt.active_sales('women') #could also be men, kids, or home
@@ -21,6 +21,16 @@
 ===Get all Upcoming Sales within a Store
   sales_array = gilt.upcoming_sales('women') #could also be men, kids, or home
 
+===Get details about a particular Sale
+  sale = gilt.sale_detail('women', store_key) #assuming store_key is already defined and valid
+
+===Get details about a particular Product
+====Using Product ID
+  product = gilt.product_detail(product_id) #assuming product_id is already defined and valid
+
+====Using a URL given in a Sale Detail
+	product = gilt.product_detail_from_url("https://api.gilt.com/v1/products/1268792864/detail.json") #example URL
+
 ===Extras
 ====Get a list of valid stores
   Kin.stores
@@ -28,8 +38,8 @@
 ==To Test
 Create a file in the test/ directory called "secret.rb" with the contents as follows:
   module Secret def Secret.password '<API_KEY>' end end #your api key goes there (without angle brackets)
-and run:
-  ruby test_kin.rb
+and run (in the shell):
+  $:ruby test_kin.rb
 
 == About
 In case you're wondering about the name, kin means gold in japanese (which is kind of related to Gilt)
